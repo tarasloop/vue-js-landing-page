@@ -1,10 +1,44 @@
-<script setup>
+<script lang="ts" setup>
+import { onMounted } from 'vue';
+import '@n8n/chat/style.css';
+
+import { createChat } from '@n8n/chat';
+
+onMounted(() => {
+  createChat({
+    webhookUrl: 'https://tobeaccelerator.app.n8n.cloud/webhook/9877aa83-4a0f-43d6-9eea-795c2a0f172d/chat',
+    webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Ciao sono TOBy 👋',
+		'Come posso aiutarti oggi?'
+	],
+	i18n: {
+		en: {
+			title: 'TOBy',
+			subtitle: "Powered By To Be Accelerator",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Chiedimi qualcosa!',
+		},
+	},
+});
+});
 import mainPhoto from "../assets/images/hero.svg";
 import { themeColor } from "../data/items";
 
-const heroHeading = "Promote Your Products by Colorlib";
-const buttonSeeFeature = "See Features";
-const buttonPricing = "Pricing";
+const heroHeading = "To Be Accelerator AI";
+// const buttonSeeFeature = "See Features";
+// const buttonPricing = "Pricing";
 </script>
 
 <template>
@@ -25,7 +59,7 @@ const buttonPricing = "Pricing";
               <h1 class="heading" data-aos="fade-up" data-aos-delay="0">
                 {{ heroHeading }}
               </h1>
-              <div class="excerpt" data-aos="fade-up" data-aos-delay="100">
+              <!-- <div class="excerpt" data-aos="fade-up" data-aos-delay="100">
                 <p>
                   Another cool free html css template by
                   <span
@@ -35,12 +69,10 @@ const buttonPricing = "Pricing";
                     "
                     >Colorlib</span
                   >
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast
+                  To Be Accelerator AI Model Transformer
                 </p>
-              </div>
-              <p data-aos="fade-up" data-aos-delay="200">
+              </div> -->
+              <!-- <p data-aos="fade-up" data-aos-delay="200">
                 <a
                   href="#features-section"
                   class="btn btn-primary smoothscroll"
@@ -57,7 +89,7 @@ const buttonPricing = "Pricing";
                   :style="[{ color: themeColor }, { borderColor: themeColor }]"
                   >{{ buttonPricing }}</a
                 >
-              </p>
+              </p> -->
             </div>
           </div>
         </div>

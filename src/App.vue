@@ -14,9 +14,9 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <Header />
+  <!-- <Header /> -->
   <Hero />
-  <Service1 />
+  <!-- <Service1 />
   <Service2 />
   <Feature />
   <Pricing />
@@ -25,6 +25,6 @@ import Footer from "./components/Footer.vue";
   <Testimonial />
   <About />
   <Blog />
-  <Contact />
-  <Footer />
+  <Contact /> -->
+  <!-- <Footer /> -->
 </template>
